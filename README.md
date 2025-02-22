@@ -1,0 +1,2 @@
+# Ruby Unexpected Assignment Behavior
+This repository demonstrates a subtle error in Ruby where directly assigning a value to a reader method does not modify the underlying instance variable.  The example shows that calling `my_object.value = 30` does not change the value of `@value`.  This is because Ruby's reader methods do not implicitly create setter methods.  The solution shows how to properly define the setter method or use `instance_variable_set` to modify the instance variable directly.
